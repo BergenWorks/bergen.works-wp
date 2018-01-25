@@ -10,8 +10,12 @@
 <body>
     <?php get_template_part( 'parts/nav', 'main' ); ?>
 
-    <div class="jumbotron jumbotron-fluid header">
+    <div class="jumbotron jumbotron-fluid frontpage-header">
         <div class="container header-container">
-            <h1 class="header-title"><?php the_title(); ?></h1>
+            <?php if($header_title = get_field('frontpage_header_title')) : ?>
+                <h1 class="header-title"><?php echo $header_title ?></h1>
+            <?php else : ?>
+                <h1 class="header-title">Coworking space in the heart of the city</h1>
+            <?php endif; ?>
         </div>
     </div>
