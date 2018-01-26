@@ -24,10 +24,12 @@
     function enqueue_scripts() {
         $assets = get_template_directory_uri() . '/assets/';
 
+        wp_register_style( 'typekit', 'https://use.typekit.net/pln1gys.css', '', '', '' );
         wp_register_style( 'font_awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', '', '', '' );
         wp_register_style( 'bootstrap_css', $assets . 'css/vendor/bootstrap.min.css', '', '', ''  );
         wp_register_style( 'main', $assets . 'css/main.min.css', '', '', '' );
 
+        wp_enqueue_style( 'typekit' );
         wp_enqueue_style( 'font_awesome' );
         wp_enqueue_style( 'bootstrap_css' );
         wp_enqueue_style( 'main' );
