@@ -6,7 +6,8 @@ const   gulp        = require('gulp'),
         sass        = require('gulp-sass'),
         cssmin      = require('gulp-cssnano'),
         rename      = require('gulp-rename'),
-        prefix      = require('gulp-autoprefixer');
+        prefix      = require('gulp-autoprefixer'),
+        uglify      = require('gulp-uglify');
 
 const sassOptions = {
     outputStyle: 'expanded',
@@ -29,6 +30,17 @@ gulp.task('styles', function(){
         .pipe(browserSync.reload({stream: true}))
 });
 
+gulp.task('scripts', function(){
+    return gulp.src('./assets/js/core.js')
+        .pipe(uglify())
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(gulp.dest('./assets/js'))
+});
+
+gulp.task('bs-reload', function(){
+    return browserSync.reload()
+})
+
 gulp.task('serve', function(){
     browserSync.init({
         proxy: 'http://localhost',
@@ -37,6 +49,7 @@ gulp.task('serve', function(){
     });
 
     gulp.watch('assets/sass/**/*.scss', ['styles']);
+    gulp.watch('./assets/js/**/*.js', ['scripts', 'bs-reload'] );
 });
 
 gulp.task('default', ['serve']);
