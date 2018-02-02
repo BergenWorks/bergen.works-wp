@@ -1,3 +1,40 @@
-html {
+html,
+body {
     font-family: $font-family-main;
+    min-height: 100vh;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    @include font-size(1.6);
+    @include line-height(3.2);
+}
+
+p {
+    margin-bottom: 2em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
+.section-title {
+    @include font-size(4);
+    @include line-height(6);
+    font-weight: 700;
+    margin: 0 0 1.5em 0;
+}
+
+.content-section {
+    padding: 7em 0;
 }
