@@ -1,10 +1,10 @@
 <?php get_header('frontpage'); ?>
 
-    <section id="frontpage-intro">
+    <section id="frontpage-intro" class="content-section">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-8 col-md-6">
-                    <h2><?php echo get_field('frontpage_intro_title') ?></h2>
+                    <h2 class="section-title"><?php echo get_field('frontpage_intro_title') ?></h2>
                 </div>
             </div>
 
