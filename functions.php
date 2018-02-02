@@ -50,3 +50,15 @@
     add_action( 'wp_enqueue_scripts', 'enqueue_scripts' );
 
     require( get_template_directory() . '/parts/bootstrap-navwalker.php' );
+
+    if( function_exists('acf_add_options_page') ) {
+        acf_add_options_page(array(
+            'page_title'    => 'General website options',
+            'menu_title'    => 'General Options',
+            'menu_slug'     => 'theme-general-settings',
+            'capability'    => 'edit_posts',
+            'redirect'      => false,
+            'position'      => 59.9,
+            'icon_url'      => 'dashicons-edit'
+        ));
+    }
