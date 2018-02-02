@@ -2,7 +2,7 @@ jQuery(function($) {
 
     // Add top margin to compensate for fixed nav
     var navbarHeight = $('.nav-main').height();
-    $('body').css('margin-top', navbarHeight);
+    $('body').css('padding-top', navbarHeight);
 
     var mainMenu = $('#main-menu-content');
     var iconBars = 'fa-bars';
