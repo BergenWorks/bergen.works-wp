@@ -1,0 +1,33 @@
+.members-content-section {
+    padding: 0 0 7em 0;
+}
+
+.members-row {
+
+    div[class*=col-]{
+        margin-bottom: 2.5em;
+    }
+}
+
+.member {
+    padding-bottom: 1em;
+    border-bottom: solid 1px #ccc;
+    height: 100%;
+
+    &-link:link,
+    &-link:visited {
+        color: $font-color-black;
+        text-decoration: none;
+    }
+
+    &-name {
+        margin: 0;
+        font-weight: bold;
+        @include font-size(2);
+    }
+
+    &-tagline {
+        margin: 0;
+        @include font-size(1.4);
+    }
+}

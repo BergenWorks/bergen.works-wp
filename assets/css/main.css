@@ -229,3 +229,35 @@ h6 {
 .footer-sponsor-container {
   max-width: 125px;
 }
+
+.members-content-section {
+  padding: 0 0 7em 0;
+}
+
+.members-row div[class*=col-] {
+  margin-bottom: 2.5em;
+}
+
+.member {
+  padding-bottom: 1em;
+  border-bottom: solid 1px #ccc;
+  height: 100%;
+}
+
+.member-link:link, .member-link:visited {
+  color: #333333;
+  text-decoration: none;
+}
+
+.member-name {
+  margin: 0;
+  font-weight: bold;
+  font-size: 20px;
+  font-size: 2rem;
+}
+
+.member-tagline {
+  margin: 0;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
