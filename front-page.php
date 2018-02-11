@@ -10,7 +10,7 @@
 
             <div class="row">
                 <div class="col-12 col-sm-10 col-md-8 offset-sm-2 offset-md-4">
-                    <?php echo get_field('frontpage_intro_content') ?>
+                    <?php echo $post->post_content; ?>
                 </div>
             </div>
         </div>
