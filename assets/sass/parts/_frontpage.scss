@@ -1,0 +1,52 @@
+
+
+#memberships {
+    padding-top: 0;
+}
+
+.memberships-row {
+    margin-bottom: 3.5em;
+}
+
+.membership {
+    width: 50%;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+
+    @media (min-width: 768px) {
+        margin-bottom: 0;
+    }
+
+    &-title {
+        @include font-size(2.8);
+    }
+
+    &-price {
+        @include font-size(2.2);
+        margin-top: 0.5em;
+    }
+
+    &-content{
+        margin-top: 1em;
+    }
+
+    &-img {
+        margin-top: auto;
+    }
+}
+
+.memberships-cta {
+    text-align: center;
+
+    &-text {
+        @include font-size(2.8);
+        margin-bottom: 1em;
+    }
+
+    &-btn {
+        @include font-size(1.8);
+        padding: 0.5em 3.5em;
+    }
+}
