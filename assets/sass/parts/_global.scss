@@ -36,7 +36,11 @@ h6 {
 }
 
 .content-section {
-    padding: 7em 0;
+    padding: 7em 0 0;
+
+    &:last-of-type {
+        padding-bottom: 7em;
+    }
 }
 
 .btn-black {

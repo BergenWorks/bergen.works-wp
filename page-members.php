@@ -26,7 +26,7 @@
 <?php query_posts(['post_type' => 'members']); ?>
 <?php if (have_posts()) : ?>
 
-    <section class="members-content-section">
+    <section class="content-section">
         <div class="container">
             <div class="row members-row">
                 <?php
