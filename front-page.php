@@ -10,7 +10,12 @@
 
             <div class="row">
                 <div class="col-12 col-sm-10 col-md-8 offset-sm-2 offset-md-4">
-                    <?php echo $post->post_content; ?>
+                    <?php
+                        if( have_posts() ) {
+                            the_post();
+                            the_content();
+                        }
+                    ?>
                 </div>
             </div>
         </div>
