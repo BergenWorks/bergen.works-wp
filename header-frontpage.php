@@ -10,12 +10,18 @@
 <body>
     <?php get_template_part( 'parts/nav', 'main' ); ?>
 
-    <div class="jumbotron jumbotron-fluid frontpage-header">
+    <?php
+        if($header_img = get_field('frontpage_header_image')) {
+            $bg_img = 'background:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(' . $header_img['url'] . ') no-repeat center center fixed';
+        } // TODO: Add placeholder background
+    ?>
+
+    <div class="jumbotron jumbotron-fluid frontpage-header" style="<?php echo $bg_img; ?>; background-size: cover">
         <div class="container header-container">
             <?php if($header_title = get_field('frontpage_header_title')) : ?>
-                <h1 class="header-title"><?php echo $header_title ?></h1>
+                <h1 class="frontpage-header-title"><?php echo $header_title ?></h1>
             <?php else : ?>
-                <h1 class="header-title">Coworking space in the heart of the city</h1>
+                <h1 class="frontpage-header-title">Coworking space in the heart of the city</h1>
             <?php endif; ?>
         </div>
     </div>
