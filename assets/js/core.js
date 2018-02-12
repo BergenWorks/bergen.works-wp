@@ -1,8 +1,12 @@
 jQuery(function($) {
 
-    // Add top margin to compensate for fixed nav
-    var navbarHeight = $('.nav-main').height();
-    $('body').css('padding-top', navbarHeight);
+    // Add top padding to compensate for fixed nav
+    var navbarOffset = function() {
+        var navbarHeight = $('.nav-main').outerHeight();
+        $('body').css('padding-top', navbarHeight);
+    }
+    navbarOffset();
+    $(window).resize(navbarOffset);
 
     var mainMenu = $('#main-menu-content');
     var iconBars = 'fa-bars';
