@@ -21,6 +21,17 @@
         </div>
     </section>
 
+    <?php if($divider_img = get_field('divider_image')) : ?>
+    <section class="content-section">
+        <div class="container">
+            <?php $divider_srcset = wp_get_attachment_image_srcset($divider_img['id'], 'full'); ?>
+            <img srcset="<?php echo $divider_srcset; ?>" alt="<?php echo $divider_img['alt']; ?>" class="img-fluid">
+
+            <span class="caption"><?php echo get_field('divider_image_caption'); ?></span>
+        </div>
+    </section>
+    <?php endif; ?>
+
     <section id="memberships" class="content-section">
         <div class="container">
             <div class="row">
