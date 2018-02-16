@@ -165,7 +165,7 @@ h6 {
   }
 }
 
-.frontpage-header {
+.header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -176,13 +176,13 @@ h6 {
 }
 
 @media (min-width: 768px) {
-  .frontpage-header {
-    height: 75vh;
-    max-height: 750px;
+  .header {
+    height: 25vh;
+    max-height: 400px;
   }
 }
 
-.frontpage-header-title {
+.header-title {
   padding: 2em 0;
   font-size: 40px;
   font-size: 4rem;
@@ -193,11 +193,18 @@ h6 {
 }
 
 @media (min-width: 768px) {
-  .frontpage-header-title {
+  .header-title {
     font-size: 60px;
     font-size: 6rem;
     line-height: 80px;
     line-height: 8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .frontpage-header {
+    height: 75vh;
+    max-height: 750px;
   }
 }
 

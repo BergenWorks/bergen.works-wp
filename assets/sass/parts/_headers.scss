@@ -1,11 +1,11 @@
-.frontpage-header {
+.header {
     display: flex;
     align-items: center;
     background: $background-dark-grey;
 
     @media (min-width: 768px) {
-        height: 75vh;
-        max-height: 750px;
+        height: 25vh;
+        max-height: 400px;
     }
 
     &-title {
@@ -19,5 +19,12 @@
             @include font-size(6);
             @include line-height(8);
         }
+    }
+}
+
+.frontpage-header {
+    @media (min-width: 768px) {
+        height: 75vh;
+        max-height: 750px;
     }
 }
