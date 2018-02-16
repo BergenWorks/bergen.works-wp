@@ -13,7 +13,10 @@
     <?php
         if($header_img = get_field('frontpage_header_image')) {
             $bg_img = 'background:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(' . $header_img['url'] . ') no-repeat center center fixed';
-        } // TODO: Add placeholder background
+        } else {
+            $header_img = get_stylesheet_directory_uri() . '/assets/images/bergenworks-header-default.png';
+            $bg_img = 'background:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(' . $header_img . ') no-repeat center center fixed';
+        }
     ?>
 
     <div class="jumbotron jumbotron-fluid frontpage-header" style="<?php echo $bg_img; ?>; background-size: cover">
