@@ -349,7 +349,32 @@ h6 {
   margin-bottom: 1em;
 }
 
-.memberships-cta-btn {
+.memberships-cta-form {
+  text-align: left;
+  margin-top: 2em;
+}
+
+.memberships-cta-form .form-control {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+.memberships-cta-form input[type=radio] {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.memberships-cta-form span.wpcf7-list-item {
+  margin: 0 1em 0 0;
+}
+
+.memberships-cta-form span.wpcf7-list-item-label {
+  font-weight: bold;
+  display: inline-block;
+  padding-left: 1em;
+}
+
+.memberships-cta-form .btn {
   font-size: 18px;
   font-size: 1.8rem;
   padding: 0.5em 3.5em;

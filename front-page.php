@@ -73,8 +73,13 @@
 
             <div class="row">
                 <div class="col-12 memberships-cta">
-                    <h2 class="memberships-cta-text"><?php echo get_field('memberships_cta') ?></h2>
-                    <button class="btn btn-black memberships-cta-btn"><?php echo get_field('memberships_btn_label') ?></button>
+                    <?php if($memberships_form = get_field('memberships_form')) : ?>
+
+                        <h2 class="memberships-cta-text"><?php echo get_field('memberships_cta') ?></h2>
+                        <div class="memberships-cta-form">
+                            <?php echo do_shortcode($memberships_form); ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>

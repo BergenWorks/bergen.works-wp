@@ -43,8 +43,31 @@
         margin-bottom: 1em;
     }
 
-    &-btn {
-        @include font-size(1.8);
-        padding: 0.5em 3.5em;
+    &-form {
+        text-align: left;
+        margin-top: 2em;
+
+        .form-control {
+            @include font-size(1.6);
+        }
+
+        input[type=radio] {
+            transform: scale(1.3);
+        }
+
+        span.wpcf7-list-item {
+            margin: 0 1em 0 0;
+        }
+
+        span.wpcf7-list-item-label {
+            font-weight: bold;
+            display: inline-block;
+            padding-left: 1em;
+        }
+
+        .btn {
+            @include font-size(1.8);
+            padding: 0.5em 3.5em;
+        }
     }
 }
