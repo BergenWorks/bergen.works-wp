@@ -270,26 +270,30 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   border-top: solid 1px #1f1f1f;
   margin-top: 2em;
   padding-top: 2em;
 }
 
-.footer-sponsors-title {
-  font-size: 18px;
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin-right: 4em;
+.footer-sponsors-link {
+  padding: 1em;
 }
 
-.footer-sponsor-container {
-  max-width: 125px;
+.footer-sponsors-link img {
+  height: 85px;
+  width: auto;
 }
 
 .memberships-row {

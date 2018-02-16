@@ -56,19 +56,18 @@
             <?php if( have_rows('sponsors', 'option') ): ?>
             <div class="row">
                 <div class="col-12 footer-sponsors">
-                    <h3 class="footer-sponsors-title">Our sponsors</h3>
                     <?php while( have_rows('sponsors', 'option') ): the_row();
-                        if(get_sub_field('show_in_footer')) :
-                            $name = get_sub_field('name');
-                            $logo = get_sub_field('logo');
-                            $link = get_sub_field('link');
+                        if(get_sub_field('show_in_footer')) : ?>
+
+                            <?php
+                                $name = get_sub_field('name');
+                                $logo = get_sub_field('logo');
+                                $link = get_sub_field('link');
                             ?>
 
-                            <div class="footer-sponsor-container">
-                                <a href="<?php echo $link ?>" title="<?php echo $name; ?>" target="_blank" rel="noopener">
-                                    <img class="img-fluid" src="<?php echo $logo['url'] ?>" alt="<?php echo $name ?>, sponsor of Bergen.Works">
-                                </a>
-                            </div>
+                            <a class="footer-sponsors-link" href="<?php echo $link ?>" target="_blank" rel="noopener">
+                                <img src="<?php echo $logo['url'] ?>" alt="<?php echo $name ?>, sponsor of Bergen.Works">
+                            </a>
                         <?php endif; ?>
                     <?php endwhile; ?>
                 </div>
