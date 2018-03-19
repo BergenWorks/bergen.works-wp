@@ -62,3 +62,17 @@
             'icon_url'      => 'dashicons-edit'
         ));
     }
+
+    /**
+     * The media page is for a gallery, we do not need the WP editor there
+     */
+    function hide_editor() {
+        $post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
+        if(!isset($post_id)) { return; }
+
+        $template_file = get_post_meta($post_id, '_wp_page_template', true);
+        if($template_file == 'page-media.php'){ // the filename of the page template
+            remove_post_type_support('page', 'editor');
+        }
+    }
+    add_action( 'admin_init', 'hide_editor' );
