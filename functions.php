@@ -76,3 +76,9 @@
         }
     }
     add_action( 'admin_init', 'hide_editor' );
+
+    // Move Yoast to bottom
+    function yoasttobottom() {
+        return 'low';
+    }
+    add_filter( 'wpseo_metabox_prio', 'yoasttobottom');
