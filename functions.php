@@ -4,6 +4,7 @@
         'main_menu' => 'Main navigation menu'
     ));
     add_theme_support( 'post-thumbnails' );
+    add_theme_support( 'title-tag' );
 
     function clean_wp_head() {
         remove_action( 'wp_head', 'feed_links_extra', 3 );
